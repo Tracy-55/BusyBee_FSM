@@ -1,6 +1,6 @@
 """
 BEE SIMULATION ENVIRONMENT - by Traicy
-Last updated: 2025-08-15 (late night coding session)
+Last updated: 2025-08-22 @ 1am (late night coding session)
 """
 import numpy as np
 
@@ -28,7 +28,7 @@ class Environment:
         return True
         
     def add_threat(self, x, y):
-        """Add threat - TODO: Implement pheromones"""
+        """Add threat - TO DO: Implement pheromones"""
         if (x,y) == self.hive_pos:
             print("Can't place threat on hive!")  # Debug
             return False
@@ -37,7 +37,7 @@ class Environment:
         self.threats.append((x,y))  # Redundant tracking
         return True
         
-    # Inefficient but human-readable
+    # still trying to make sense of this
     def get_adjacent(self, x, y, obj_type):
         """Check adjacent cells - could be optimized"""
         adjacent = []
