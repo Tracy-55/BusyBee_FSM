@@ -30,13 +30,13 @@ class Bee:
             # Can't move onto other bees (placeholder)
             if env.grid[new_x][new_y] not in ['B']:  # Simple check
                 self.x, self.y = new_x, new_y
-                self.energy -= 0.5  # Energy cost
+                self.energy -= 1 # Energy cost
                 self.last_action = f"Moved to ({new_x},{new_y})"
                 return True
         return False
         
     def update_state(self, env):
-        """FSM logic with some imperfections"""
+        
         if self.health <= 0 or self.energy <= 0:
             print("Bee died!")  # Debug
             return False

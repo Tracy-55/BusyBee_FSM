@@ -6,7 +6,6 @@ Last updated: 2025-08-18 (3:42 AM - tired coding session)
 from environment import Environment
 from bee import Bee
 import time
-import sys  # imported but not used yet
 
 # ASCII ART - left this here from earlier
 BEE_ART = r"""
@@ -76,6 +75,8 @@ def main():
         
     print("\nFinal stats:")
     print(f"Pollen collected: {bee.pollen}")  # forgot units
+    print (f" - Final Health: {bee.health}")
+    print (" - Note: Attack state needs improvement")
 
 if __name__ == "__main__":
     main()
