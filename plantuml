@@ -1,0 +1,30 @@
+@startuml BusyBeeFSM
+state "WANDERING" as wandering
+state "FORAGING" as foraging
+state "ATTACKING" as attacking
+
+[*] --> wandering
+
+wandering --> foraging : Flower\nadjacent
+wandering --> attacking : Threat\nadjacent
+foraging --> wandering : At hive\nwith pollen
+attacking --> wandering : No threats\nnearby
+
+note left of wandering
+  • Moves randomly
+  • Loses 0.5 energy/step
+  • Seeks flowers/threats
+end note
+
+note right of foraging
+  • Collects pollen (+1)
+  • Energy = 100
+  • Returns to hive
+end note
+
+note right of attacking
+  • Attacks threat (-10 HP)
+  • Releases pheromones
+  • Seeks new threats
+end note
+@enduml
