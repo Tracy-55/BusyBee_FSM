@@ -15,7 +15,33 @@
 'bash'
 pip install numpy # Only dependency (for now)
 
-### 2025-08-16 Hotfix
+# How to run the program
 
-- Fixed `random_direction()` in utils.py (forgot import)
-- Discovered during testing when bees stopped moving
+- python main.py
+
+# Development Diary
+
+# 2025-08-18 (Initial Version)
+
+- Basic FSM structure implemented
+- Wandering and foraging states working
+- Simple ASCII visualization
+
+# 2025-08-19 (Bug Fixes)
+
+- Fixed bee getting stuck at (0,0)
+- Added energy system
+- Improved movement logic
+
+# 2025-08-20 (Known Issues)
+
+1. Attack state is basic (needs pheromones)
+2. Bees sometimes ignore nearby flowers
+3. No swarm intelligence yet
+4. Energy drain might be too fast
+
+## Future Improvements
+
+- [ ] Implement pheromone tracking
+- [ ] Add RESTING state
+- [ ] Better pathfinding to hive
